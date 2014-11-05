@@ -59,6 +59,10 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rbvmomi (1.8.2)
+      builder
+      nokogiri (>= 1.4.1)
+      trollop
     redis (3.1.0)
     rest_client (1.8.1)
       netrc (~> 0.7.7)
@@ -90,6 +94,7 @@ GEM
     thor (0.19.1)
     tilt (1.4.1)
     timers (1.1.0)
+    trollop (2.0)
     uuid (2.3.7)
       macaddr (~> 1.0)
     wasabi (3.3.1)
@@ -108,6 +113,7 @@ DEPENDENCIES
   pry
   pry-rescue
   pry-stack_explorer
+  rbvmomi
   redis
   rest_client
   ruby-progressbar
