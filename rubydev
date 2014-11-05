@@ -2,7 +2,7 @@
 
 # launch container, sharing /tmp to ease file copy
 
-mkdir /tmp/rubydev
-docker run -it --rm \
+mkdir -p /tmp/rubydev
+docker run -it --rm -h rubydev \
    -v /tmp/rubydev:/tmp \
    bortels/rubydev bash
