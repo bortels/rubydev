@@ -109,6 +109,7 @@ GEM
     wasabi (3.3.1)
       httpi (~> 2.0)
       nokogiri (>= 1.4.0)
+    zipruby (0.3.6)
 
 PLATFORMS
   ruby
@@ -130,3 +131,4 @@ DEPENDENCIES
   sinatra
   sinatra-contrib
   slack-api
+  zipruby
