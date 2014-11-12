@@ -4,6 +4,7 @@ GEM
     akami (1.2.2)
       gyoku (>= 0.4.0)
       nokogiri
+    archive-tar-minitar (0.5.2)
     backports (3.6.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -18,6 +19,11 @@ GEM
       nio4r (>= 0.5.0)
     coderay (1.1.0)
     debug_inspector (0.0.2)
+    docker-api (1.14.0)
+      archive-tar-minitar
+      excon (>= 0.38.0)
+      json
+    excon (0.41.0)
     eye (0.6.3)
       celluloid (~> 0.15.0)
       celluloid-io (~> 0.15.0)
@@ -30,14 +36,16 @@ GEM
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.9.1)
       faraday (>= 0.7.4, < 0.10)
-    gyoku (1.1.1)
+    gyoku (1.2.2)
       builder (>= 2.1.2)
-    httpi (2.2.7)
+    httpi (2.3.0)
       rack
     interception (0.5)
+    json (1.8.1)
     macaddr (1.7.1)
       systemu (~> 2.6.2)
     method_source (0.8.2)
+    mime-types (1.25.1)
     mini_portile (0.6.1)
     mongo (1.11.1)
       bson (= 1.11.1)
@@ -45,7 +53,7 @@ GEM
     multipart-post (2.0.0)
     netrc (0.7.9)
     nio4r (1.0.1)
-    nokogiri (1.6.4)
+    nokogiri (1.6.4.1)
       mini_portile (~> 0.6.0)
     nori (2.4.0)
     pg (0.17.1)
@@ -72,15 +80,15 @@ GEM
     rest_client (1.8.1)
       netrc (~> 0.7.7)
     ruby-progressbar (1.7.0)
-    savon (2.7.2)
-      akami (~> 1.2.0)
+    savon (2.8.0)
+      akami (~> 1.2)
       builder (>= 2.1.2)
-      gyoku (~> 1.1.0)
-      httpi (~> 2.2.3)
+      gyoku (~> 1.2)
+      httpi (~> 2.3)
       nokogiri (>= 1.4.0)
-      nori (~> 2.4.0)
+      nori (~> 2.4)
       uuid (~> 2.3.7)
-      wasabi (~> 3.3.0)
+      wasabi (= 3.3.0)
     sigar (0.7.3)
     sinatra (1.4.5)
       rack (~> 1.4)
@@ -106,8 +114,9 @@ GEM
     trollop (2.0)
     uuid (2.3.7)
       macaddr (~> 1.0)
-    wasabi (3.3.1)
+    wasabi (3.3.0)
       httpi (~> 2.0)
+      mime-types (< 2.0.0)
       nokogiri (>= 1.4.0)
     zipruby (0.3.6)
 
@@ -116,6 +125,7 @@ PLATFORMS
 
 DEPENDENCIES
   bson_ext
+  docker-api
   eye
   eye-rotate
   mongo (~> 1.11.1)
