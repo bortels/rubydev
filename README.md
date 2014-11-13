@@ -1,7 +1,7 @@
 rubydev
 =======
 
-Ruby 2.1.3 plus my commonly used gems.
+Ruby 2.1.4 plus my commonly used gems.
 
 Not much to it really. Look at the Gemspec file for the list.
 
