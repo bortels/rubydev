@@ -1,4 +1,4 @@
-FROM ruby:2.1.4
+FROM ruby:2.1.5
 MAINTAINER tom.bortels@digitalinsight.com
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
