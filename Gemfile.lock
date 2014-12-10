@@ -5,6 +5,15 @@ GEM
       gyoku (>= 0.4.0)
       nokogiri
     archive-tar-minitar (0.5.2)
+    aws-sdk (2.0.13.pre)
+      aws-sdk-resources (= 2.0.13.pre)
+    aws-sdk-core (2.0.13)
+      builder (~> 3.0)
+      jmespath (~> 1.0)
+      multi_json (~> 1.0)
+      multi_xml (~> 0.5)
+    aws-sdk-resources (2.0.13.pre)
+      aws-sdk-core (= 2.0.13)
     backports (3.6.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -41,6 +50,8 @@ GEM
     httpi (2.3.0)
       rack
     interception (0.5)
+    jmespath (1.0.2)
+      multi_json (~> 1.0)
     json (1.8.1)
     macaddr (1.7.1)
       systemu (~> 2.6.2)
@@ -50,6 +61,7 @@ GEM
     mongo (1.11.1)
       bson (= 1.11.1)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     multipart-post (2.0.0)
     netrc (0.7.9)
     nio4r (1.0.1)
@@ -124,6 +136,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk (= 2.0.13.pre)
+  aws-sdk-core
   bson_ext
   docker-api
   eye
