@@ -39,6 +39,7 @@ GEM
       faraday (>= 0.7.4, < 0.10)
     gyoku (1.2.2)
       builder (>= 2.1.2)
+    hashie (3.3.2)
     highline (1.6.21)
     httpi (2.3.0)
       rack
@@ -134,6 +135,7 @@ DEPENDENCIES
   docker-api
   eye
   eye-rotate
+  hashie
   mongo (~> 1.11.1)
   pg
   pry
