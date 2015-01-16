@@ -74,6 +74,7 @@ GEM
     pry-stack_explorer (0.4.9.1)
       binding_of_caller (>= 0.7)
       pry (>= 0.9.11)
+    r509 (0.10.0)
     rack (1.6.0)
     rack-protection (1.5.3)
       rack
@@ -87,7 +88,7 @@ GEM
     rest_client (1.8.3)
       netrc (~> 0.7.7)
     ruby-progressbar (1.7.1)
-    savon (2.8.0)
+    savon (2.8.1)
       akami (~> 1.2)
       builder (>= 2.1.2)
       gyoku (~> 1.2)
@@ -142,6 +143,7 @@ DEPENDENCIES
   pry-remote-em
   pry-rescue
   pry-stack_explorer
+  r509
   rbvmomi
   redis
   rest_client
