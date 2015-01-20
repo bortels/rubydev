@@ -9,4 +9,5 @@ ENV HOME /app
 WORKDIR /app
 ADD Gemfile /app/
 ADD Gemfile.lock /app/
+EXPOSE 4567
 RUN bundler install
