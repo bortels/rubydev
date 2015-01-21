@@ -65,6 +65,7 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    net-ldap (0.10.1)
     netrc (0.10.2)
     nio4r (1.1.0)
     nokogiri (1.6.5)
@@ -150,6 +151,7 @@ DEPENDENCIES
   eye-rotate
   hashie
   mongo (~> 1.11.1)
+  net-ldap
   pg
   pry
   pry-remote-em
