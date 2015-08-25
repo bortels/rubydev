@@ -1,13 +1,19 @@
-FROM ruby:2.1.5
+# See https://blog.codeship.com/build-minimal-docker-container-ruby-apps/
+FROM alpine:3.2
 MAINTAINER tom.bortels@digitalinsight.com
-RUN apt-get update
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install curl wget git vim redis-tools jq apt-utils
-# The following errors, which bugs me. 
-# RUN DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
+ENV BUILD_PACKAGES bash curl-dev ruby-dev build-base
+ENV RUBY_PACKAGES ruby ruby-io-console ruby-bundler ruby-nokogiri
+ENV UTIL_PACKAGES ca-certificates wget git vim redis jq grep
+RUN apk update && \
+    apk upgrade && \
+    apk add $BUILD_PACKAGES && \
+    apk add $RUBY_PACKAGES && \
+    apk add $UTIL_PACKAGES && \
+    rm -rf /var/cache/apk/*
 RUN mkdir /app
 ENV HOME /app
 WORKDIR /app
-ADD Gemfile /app/
-ADD Gemfile.lock /app/
-EXPOSE 4567
-RUN bundler install
+COPY Gemfile /app/
+COPY Gemfile.lock /app/
+RUN bundle install
+CMD bash
