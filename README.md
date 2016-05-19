@@ -17,3 +17,4 @@ changes:
 
 2015-08-25 - moved to Alpine from Ubuntu; reduced size from 978 megs to 257 megs.
              Also updated to ruby 2.2.2, and cleaned out some unused gems.
+2016-05-19 - updated to alpine 3.3, added tini and rsync, gem hamster
